@@ -3,18 +3,18 @@ const inputForm = document.querySelector(".login-form");
 inputForm.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
-    event.preventDefault();
-    const {
+  event.preventDefault();
+  const {
     elements: { email, password },
   } = event.currentTarget;
 
-    if (email.value === "" || password.value === "") {
-        return alert("Необхідно заповнити усі поля! :)");
-    }
-    const user = {
-        email: email.value,
-        password: password.value,
-    };
-    console.log(user);
-    event.currentTarget.reset();
+  if (email.value === "" || password.value === "") {
+    return alert("Необхідно заповнити усі поля! :)");
+  }
+  const user = {
+    email: email.value,
+    password: password.value,
+  };
+  console.log(user);
+  event.currentTarget.reset();
 }
